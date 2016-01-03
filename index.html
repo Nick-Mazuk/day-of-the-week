@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Password Helper</title>
+	<title>Day of the Week</title>
 	<script src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -15,25 +15,109 @@
 </head>
 <body>
 	<div id="container">
-		<h1>Password Helper</h1>
+		<h1>Day of the Week</h1>
 		<div class="centerWrapper">
 			<div id="nav">
-				<div id="first" class="navButton">First</div>
-				<div id="second" class="navButton">Second</div>
-				<div id="third" class="navButton">Third</div>
+				<div id="first" class="navButton">New Year's Day</div>
+				<div id="second" class="navButton">Any Day</div>
 				<div id="page"></div>
 			</div>
 		</div>
 		<div id="contentWrapper">
 			<div id="firstContent" class="content notShown">
-				Hello world
+				<div class="centerWrapper">
+					<div id="firstGivenYear"></div>
+					<div class="dateWrapper">
+						<div id="firstSunday" class="date">Sunday</div>
+						<div id="firstMonday" class="date">Monday</div>
+						<div id="firstTuesday" class="date">Tuesday</div>
+						<div id="firstWednesday" class="date">Wednesday</div>
+						<div id="firstThursday" class="date">Thursday</div>
+						<div id="firstFriday" class="date">Friday</div>
+						<div id="firstSaturday" class="date">Saturday</div>
+						<div id="firstDateSelector"></div>
+					</div>
+					<br><br>
+					<div id="firstCorrectness">Nan</div>
+				</div>
+				<br>
+				<div id="firstHint" style="cursor:pointer">Show Hint</div>
+				<div id="firstHintText" class="notShown emphasis">For a year 20XX:<br>Day code = (-1 + XX + roundup(XX / 4)) mod 7<br>Sunday = 0<br>Monday = 1<br>Tuesday = 2<br>Wednesday = 3<br> Thursday = 4<br>Friday = 5<br>Saturday = 6</div>
+				<div id="firstRevealGraph" class="revealGraph">Show Graphs</div>
+				<div id="firstGraph" class="graphs">
+					<p>Performance</p>
+					<dl id="firstGraphDays">
+						<dd class="percentage-10 gray" data-text="0/0" id="firstGraphOverall"><span class="graphText">Overall</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="firstGraphSunday"><span class="graphText">Sunday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="firstGraphMonday"><span class="graphText">Monday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="firstGraphTuesday"><span class="graphText">Tuesday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="firstGraphWednesday"><span class="graphText">Wednesday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="firstGraphThursday"><span class="graphText">Thursday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="firstGraphFriday"><span class="graphText">Friday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="firstGraphSaturday"><span class="graphText">Saturday</span></dd>
+					</dl>
+				</div>
 			</div>
 			<div id="secondContent" class="content">
-				Hello world 2
+				<div class="centerWrapper">
+					<div id="secondGivenDate"></div>
+					<div class="dateWrapper">
+						<div id="secondSunday" class="date">Sunday</div>
+						<div id="secondMonday" class="date">Monday</div>
+						<div id="secondTuesday" class="date">Tuesday</div>
+						<div id="secondWednesday" class="date">Wednesday</div>
+						<div id="secondThursday" class="date">Thursday</div>
+						<div id="secondFriday" class="date">Friday</div>
+						<div id="secondSaturday" class="date">Saturday</div>
+						<div id="secondDateSelector"></div>
+					</div>
+					<br><br>
+					<div id="secondCorrectness">Nan</div>
+				</div>
+				<br>
+				<div id="secondHint" style="cursor:pointer">Show Hint</div>
+				<div id="secondHintText" class="notShown emphasis">Doomsdays:<br>Jan 3 (or 4 for leap years)<br>Feb 28 (or 29 for leap years)<br>3/14<br>4/4, 6/6, 8/8, 10/10, 12/12<br>5/9, 7/11, 9/5, 11/7</div>
+				<div id="secondRevealGraph" class="revealGraph">Show Graphs</div>
+				<div id="secondGraph" class="graphs">
+					<p>Performance</p>
+					<dl id="secondGraphDays">
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphOverall"><span class="graphText">Overall</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphSunday"><span class="graphText">Sunday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphMonday"><span class="graphText">Monday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphTuesday"><span class="graphText">Tuesday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphWednesday"><span class="graphText">Wednesday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphThursday"><span class="graphText">Thursday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphFriday"><span class="graphText">Friday</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphSaturday"><span class="graphText">Saturday</span></dd>
+					</dl>
+					<p>Months</p>
+					<dl id="secondGraphDays">
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphJan"><span class="graphText">January</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphFeb"><span class="graphText">February</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphMar"><span class="graphText">March</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphApr"><span class="graphText">April</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphMay"><span class="graphText">May</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphJun"><span class="graphText">June</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphJul"><span class="graphText">July</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphAug"><span class="graphText">August</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphSep"><span class="graphText">September</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphOct"><span class="graphText">October</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphNov"><span class="graphText">November</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphDec"><span class="graphText">December</span></dd>
+					</dl>
+					<p>Leap Years</p>
+					<dl id="secondGraphDays">
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphLeap"><span class="graphText">Leap Year</span></dd>
+						<dd class="percentage-10 gray" data-text="0/0" id="secondGraphNotLeap"><span class="graphText">Not</span></dd>
+					</dl>
+				</div>
 			</div>
-			<div id="thirdContent" class="content notShown">
-				Hello world 3
+			<h2 class="about">About</h2>
+			<p class="about">This page was inspired as a way to test the methods to figure out the day of the week for any given way as shown in this video:</p>
+			<div class="centerWrapper">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5NxrGK9GdAQ?rel=0" frameborder="0" allowfullscreen></iframe>
 			</div>
+			<p class="about">For more information, view <a href="https://en.wikipedia.org/wiki/Doomsday_rule">https://en.wikipedia.org/wiki/Doomsday_rule</a></p>
 		</div>
 	</div>
 </body>
